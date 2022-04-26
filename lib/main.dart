@@ -26,16 +26,16 @@ class MyStatelessWidget extends StatelessWidget {
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
           if (constraints.maxWidth > 600) {
-            return _buildWideContainers();
+            return _telaGrande();
           } else {
-            return _buildNormalContainer();
+            return _telaPequena();
           }
         },
       ),
     );
   }
 
-  Widget _buildNormalContainer() {
+  Widget _telaPequena() {
     return Center(
       child: Container(
         height: 100.0,
@@ -45,7 +45,7 @@ class MyStatelessWidget extends StatelessWidget {
     );
   }
 
-  Widget _buildWideContainers() {
+  Widget _telaGrande() {
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
